@@ -1,3 +1,6 @@
+/* time complexity(best, average and worst case) = O(n^2) */
+/* Selection sort is unstable */
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -16,14 +19,12 @@ int main()
                 idx = j;
             }
         }
-        int temp = arr[idx];
-        arr[idx] = arr[i];
-        arr[i] = temp;
+        swap(arr[idx], arr[i]);
     }
 
-    for (int i = 0; i <= n - 1; i++)
+    for (auto it : arr)
     {
-        cout << arr[i] << " ";
+        cout << it << " ";
     }
     return 0;
 }
