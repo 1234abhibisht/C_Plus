@@ -4,6 +4,10 @@ vector<int> zeroesEnd(vector<int> &arr, int n)
 {
     int i = INT_MIN;
     int j = INT_MIN;
+    if (n < 2)
+    { // if array contains only one element
+        return;
+    }
     for (int a = 0; a <= n - 1; a++)
     {
         if (arr[a] == 0)
@@ -40,6 +44,6 @@ int main()
     return 0;
 }
 
-// time complexity = O(n) + O(0) = O(n), as in second loop, j is goind from 
+// time complexity = O(n) + O(0) = O(n), as in second loop, j is goind from
 // a + 1 to n - 1 = O(n - a - 1) = O(-1) = O(0)
 // space complexity = O(1)
