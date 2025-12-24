@@ -24,3 +24,5 @@ int main()
     cout << missingElement(arr, n);
     return 0;
 }
+
+// time complexity = O(n - 1) = O(n)
