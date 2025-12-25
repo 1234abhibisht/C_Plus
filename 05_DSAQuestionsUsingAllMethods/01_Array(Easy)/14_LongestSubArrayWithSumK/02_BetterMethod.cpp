@@ -1,3 +1,6 @@
+// this better method is for positive, negative and zeroes elements of array
+// we can't further optimise this method
+
 #include <bits/stdc++.h>
 using namespace std;
 int longestSubArray(vector<int> &arr, int n, long long k)
@@ -12,14 +15,16 @@ int longestSubArray(vector<int> &arr, int n, long long k)
             len = max(len, i + 1);
         }
         int rem = sum - k;
-        if (mpp.find(sum) == mpp.end())
-        {
-            mpp[sum] = i;
-        }
+        // first check whether rem key is present in map, if not then put in map
+
         if (mpp.find(rem) != mpp.end())
         { // find(rem) is not pointing to address next to where map ends,
             // means find(rem) is pointing to address inside the map, means key exists in map
             len = max(len, i - mpp[rem]);
+        }
+        if (mpp.find(sum) == mpp.end())
+        {
+            mpp[sum] = i;
         }
     }
     return len;
