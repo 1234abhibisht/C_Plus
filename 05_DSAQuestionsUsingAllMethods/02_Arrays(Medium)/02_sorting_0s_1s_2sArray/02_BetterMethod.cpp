@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> sort_0_1_2(vector<int> arr, int n)
+vector<int> sort_0_1_2(vector<int> &arr, int n)
 {
     int ele0 = 0, ele1 = 0, ele2 = 0;
     for (int i = 0; i <= n - 1; i++)
