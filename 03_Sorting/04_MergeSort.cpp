@@ -6,7 +6,7 @@ using namespace std;
 void merge(vector<int> &arr, int minIdx, int midIdx, int maxIdx)
 {
     int left = minIdx;
-    int right = maxIdx + 1;
+    int right = midIdx + 1;
     vector<int> temp;
     while (left <= midIdx && right <= maxIdx)
     {
