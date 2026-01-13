@@ -1,16 +1,16 @@
-/* time complexity(average and worst case) = O(n^2) 
+/* time complexity(average and worst case) = O(n^2)
    (best case) = 0(n) */
- /* Bubble sort is stable */
+/* Bubble sort is stable */
 
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    vector<int> arr = {5, 4, 3, 2, 1};
+    vector<int> arr = {1, 2, 3, 4, 5};
     int n = arr.size();
-    bool check = false;
     for (int i = 0; i <= n - 1; i++)
     {
+        bool check = false;
         for (int j = 0; j <= n - 2 - i; j++)
         {
             if (arr[j] > arr[j + 1])
