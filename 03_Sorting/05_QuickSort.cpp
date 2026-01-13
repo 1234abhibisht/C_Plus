@@ -29,7 +29,7 @@ int pivot(vector<int> &arr, int minIdx, int maxIdx)
 }
 vector<int> quickSort(vector<int> &arr, int minIdx, int maxIdx)
 {
-    if (minIdx < maxIdx)
+    if (minIdx < maxIdx)  /* acting as a base case */
     { /* we will do sorting only if we have array of more than one element */
         int pivotIdx = pivot(arr, minIdx, maxIdx);
         quickSort(arr, minIdx, pivotIdx - 1);
