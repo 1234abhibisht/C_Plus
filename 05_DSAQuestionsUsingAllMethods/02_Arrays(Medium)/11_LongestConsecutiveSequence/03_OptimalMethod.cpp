@@ -30,3 +30,5 @@ int main()
 
 // Time Complexity = O(n) worst case of set + O(2n) to itrate in set = O(3n)
 // Space Complexity = O(n)
+
+// If there are collisions and set has worst case, then in that case, Better Method is better to use
