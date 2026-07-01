@@ -33,9 +33,9 @@ void merge(vector<int> &arr, int minIdx, int midIdx, int maxIdx)
     }
 
     /* transfer value of temp to arr */
-    for (int i = 0; i <= maxIdx; i++)
+    for (int i = minIdx; i <= maxIdx; i++)
     {
-        arr[i - minIdx] = temp[i];
+        arr[i] = temp[i - min];
     }
     return;
 }
