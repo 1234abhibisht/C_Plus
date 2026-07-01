@@ -22,9 +22,9 @@ int pivot(vector<int> &arr, int minIdx, int maxIdx)
         {
             swap(arr[i], arr[j]);
         }
-        /* swap arr[j] with pivot */
-        swap(arr[j], arr[minIdx]); /* as pivotPoint = arr[minIdx] */
     }
+    /* swap arr[j] with pivot */
+    swap(arr[j], arr[minIdx]); /* as pivotPoint = arr[minIdx] */
     return j;
 }
 vector<int> quickSort(vector<int> &arr, int minIdx, int maxIdx)
