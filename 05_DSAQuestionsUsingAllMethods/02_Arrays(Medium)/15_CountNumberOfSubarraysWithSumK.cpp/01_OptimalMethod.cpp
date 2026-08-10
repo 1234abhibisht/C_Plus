@@ -7,8 +7,10 @@ int countSubarraysWithSumK(vector<int>& nums, int k) {
         for(int i = 0; i <= nums.size() - 1; i++) {
             sum += nums[i];
             int rem = sum - k;
-            count += mpp[rem];
-            mpp[sum]++;
+            if(mpp.find(rem) != mpp.end()) {
+                count += mpp[rem];
+            }
+            mpp[sum]++; // we are not using (mpp.find(rem) == mpp.end()) as in arr = [2,0,0,3], if sum is repeatedly present in mpp we are just updating its frequency
         }
         return count;
     }
