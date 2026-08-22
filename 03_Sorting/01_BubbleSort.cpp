@@ -8,7 +8,7 @@ int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
     int n = arr.size();
-    for (int i = 0; i <= n - 1; i++)
+    for (int i = 0; i <= n - 2; i++)
     {
         bool check = false;
         for (int j = 0; j <= n - 2 - i; j++)
