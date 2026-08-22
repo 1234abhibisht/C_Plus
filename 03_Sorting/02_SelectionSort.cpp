@@ -9,17 +9,15 @@ int main()
     int n = arr.size();
     for (int i = 0; i <= n - 2; i++)
     {
-        int max = *max_element(arr.begin(), arr.begin() + 5);
-        int idx = -1;
-        for (int j = i; j <= n - 1; j++)
+        int minIdx = i;
+        for (int j = i + 1; j <= n - 1; j++)
         {
-            if (arr[j] < max)
+            if (arr[j] < arr[minIdx)
             {
-                max = arr[j];
-                idx = j;
+                minIdx = j;
             }
         }
-        swap(arr[idx], arr[i]);
+        swap(arr[minIdx], arr[i]);
     }
 
     for (auto it : arr)
