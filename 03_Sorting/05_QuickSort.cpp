@@ -48,3 +48,8 @@ int main()
     }
     return 0;
 }
+
+// Time Complexity - best and average case -> O(n logn)
+//                   worst case -> 0(n^2), when pivot element is consistently smallest or largest element(i.e in already sorted arrays with poor pivot selectoin)
+
+// Space Complexity - O(1)
