@@ -55,4 +55,6 @@ int main() {
     return 0;
 }
 
-// Time Complexity = O(n) + O(log n){to insert in map}
+// Time Complexity = O(n logm), where is n is number of nodes and m is size of map
+//                 -> as we are using map inside while loop, where while loop is to traverse to every node
+// Space Complexity = O(n)
