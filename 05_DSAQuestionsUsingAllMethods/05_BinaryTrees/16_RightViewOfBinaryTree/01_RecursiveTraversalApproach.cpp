@@ -11,16 +11,23 @@ struct node {
         right = NULL;
     }
 };
-vector<int> rightView(node* root, int level) {
-    vector<int> ans;
+void view(node* root, int level, vector<int> &ans) {
     if(root == NULL) {
-        return ans;
+        return;
     }
     if(level == ans.size()) {
         ans.emplace_back(root -> data);
     }
     rightView(root -> right, level + 1);
     rightView(root -> left, level + 1);
+}
+vector<int> rightView(node* root, int level) {
+    vector<int> ans;
+    if(root == NULL) {
+        return ans;
+    }
+    view(root, level, ans);
+    return ans;
 }
 int main() {
     node* root = new node(5);  // we have use constructor inside struct, so we dont need to use malloc, instead use new
