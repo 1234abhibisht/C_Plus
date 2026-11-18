@@ -18,6 +18,8 @@ int main() {
         cin >> u >> v;
         adj[u][v] = 1;
         adj[v][u] = 1;  // as for undirected graph, there is edge direction to both sides
+        
+        // for directed graph, if direction is from u to v just do adj[u][v] = 1, dont need to do adj[v][u] = 1
     }
     return 0;
 }
