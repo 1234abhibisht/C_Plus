@@ -2,7 +2,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-void traverse(int node, vector<vector<int>> adj, vector<int> ans, vector<int> track) {
+void traverse(int node, vector<vector<int>> adj, vector<int> ans, vector<int> &track) {
 
     ans.emplace_back(node);
     track[node] = 1;
@@ -43,5 +43,5 @@ int main() {
     return 0;
 }
 
-// Time Complexity = O(n)
+// Time Complexity = O(n) + O(2E)
 // Space Complexity = O(n){for vector track} + O(n){for recursion call stack} = O(2n)
