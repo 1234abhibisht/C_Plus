@@ -53,5 +53,7 @@ int main() {
     return 0;
 }
 
-// Time Complexity = O(n) + O(2E) 
+// Time Complexity = O(n) + O(2E) + O(n){using for loop for the connected components, in connectedComponents function}
+//                                  why + O(n), not * O(n), because for each node we are traversing only one component not all the components
+
 // Space Complexity = O(2n)

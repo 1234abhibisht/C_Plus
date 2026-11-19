@@ -48,4 +48,7 @@ int main() {
     return 0;
 }
 
-// Space Complexity = O(2 * n), because each edge has 2 nodes, and each node is going 2 times in
+// Time Complexity = O(n) + O(2E) + O(n){using for loop for the connected components, in connectedComponents function}
+//                                  why + O(n), not * O(n), because for each node we are traversing only one component not all the components
+
+// Space Complexity = O(2n)
