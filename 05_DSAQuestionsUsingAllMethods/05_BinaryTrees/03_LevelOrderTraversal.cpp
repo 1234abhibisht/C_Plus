@@ -53,11 +53,9 @@ int main() {
     return 0;
 }
 
-// Time Complexity = O(n)
-//   why O(n) time complexity ?
-//   -> because we are traversing to every node of tree, and queue is used inside while to traverse to every node
-//      -> thats why O(n) instead of O(n logn)
-
+// Time Complexity = O(n), where n is number of nodes
+//   because the while(!qu.empty()) runs for number of nodes times, and queue has O(1) time complexity for insertion and deletion
 //   -> and inner for loop is just to insert the nodes of a level together in nested vector form for output answer format purpose
+
 // Space Complexity = O(n), n is number of nodes because it is BFS
 //                    O(1), when tree is skewed as skewed tree has width = 1 in each level
