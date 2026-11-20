@@ -50,4 +50,4 @@ int main() {
 }
 
 // Time Complexity = O(E logV)
-// Space Complexity = O(E + V)
+// Space Complexity = O(E + V),  {O(V) for distance vector and O(E) for adjacent list}
