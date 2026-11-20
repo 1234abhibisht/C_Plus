@@ -8,7 +8,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> dijkstra(int v, vector<vector<int>> edge, int source) {  // we are given number of nodes, adjancy list and source node
+vector<int> bellmanFord(int v, vector<vector<int>> edge, int source) {  // we are given number of nodes, adjancy list and source node
     vector<int> distance(v, 1e9);
     distance[source] = 0;
     for(int i = 0; i <= v - 1; i++) {  // perform relaxation v - 1 times
@@ -43,12 +43,12 @@ int main() {
     int edges;
     cout << "Enter number of edges : ";
     cin >> edges;
-    vector<vector<pair<int, int>>> adj(nodes);
+    // for bellmanford, generally create adjacency edge instead of adjacency list
+    vector<vector<int>> adj(nodes);
     for(int i = 0; i <= edges - 1; i++) {
         int u, v;
         int weight;   // in inner vector, put pair of neighbouring node and weight
-        adj[u].push_back({v, weight});
-        adj[v].push_back({v, weight});
+        adj.push_back({u, v, weight});
     }
     return 0;
 }
