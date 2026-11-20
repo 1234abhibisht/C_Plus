@@ -5,7 +5,7 @@ using namespace std;
 vector<vector<int>> floydWarshall(int v, vector<vector<int>> &distMatrix) {
     for(int i = 0; i <= v - 1; i++) {
         for(int j = 0; j <= v - 1; j++) {
-            if(distMatrix[i][j] == -1) {
+            if(distMatrix[i][j] == -1) {  // if for weighted graph, the unreachable nodes are initialized with -1 in input matrix 
                 distMatrix[i][j] = 1e9;
             }
             if(i == j) {  
