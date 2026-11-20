@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool checkCycleDFS(int starting, vector<vector<int>> adj, vector<int> &target, int parent) {
-    target[starting] = 1;
+bool checkCycleDFS(int starting, vector<vector<int>> adj, vector<int> &visited, int parent) {
+    visited[starting] = 1;
     for(auto it : adj[starting]) {
-        if(target[it] != 1) {
-            bool ans = checkCycleDFS(it, adj, target, starting);
+        if(visited[it] != 1) {
+            bool ans = checkCycleDFS(it, adj, visited, starting);
             if(ans == true) {
                 return true;
             }
@@ -16,10 +16,10 @@ bool checkCycleDFS(int starting, vector<vector<int>> adj, vector<int> &target, i
     return false;
 }
 bool connectedComponents(int v, vector<vector<int>> adj) {  // this is the main funciton of algo, basically it handles for connected components also
-    vector<int> target(v);
+    vector<int> visited(v);
     for(int i = 0; i <= v - 1; i++) {
-        if(target[i] != 1) {
-            bool ans = checkCycleDFS(i, adj, target, -1);  // let parent of initial starting node be -1
+        if(visited[i] != 1) {
+            bool ans = checkCycleDFS(i, adj, visited, -1);  // let parent of initial starting node be -1
             if(ans == true) {
                 return true;
             }
