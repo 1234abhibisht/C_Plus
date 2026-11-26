@@ -43,7 +43,7 @@ int main() {
     int edges;
     cout << "Enter number of edges : ";
     cin >> edges;
-    // for bellmanford, generally create adjacency edge instead of adjacency list
+    // for bellmanford, generally create edge list instead of adjacency list
     vector<vector<int>> adj(nodes);
     for(int i = 0; i <= edges - 1; i++) {
         int u, v;
