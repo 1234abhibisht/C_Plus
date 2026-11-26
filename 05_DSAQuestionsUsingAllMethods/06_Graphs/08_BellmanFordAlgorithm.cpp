@@ -11,7 +11,7 @@ using namespace std;
 vector<int> bellmanFord(int v, vector<vector<int>> edge, int source) {  // we are given number of nodes, adjancy list and source node
     vector<int> distance(v, 1e9);
     distance[source] = 0;
-    for(int i = 0; i <= v - 1; i++) {  // perform relaxation v - 1 times
+    for(int i = 0; i <= v - 2; i++) {  // perform relaxation v - 1 times
         for(auto it : edge) {
             int node = it[0];
             int adjNode = it[1];
